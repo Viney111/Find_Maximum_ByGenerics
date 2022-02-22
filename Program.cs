@@ -10,7 +10,7 @@ namespace FindMaximumByGenerics
         static void Main(string[] args)
         {
             Program program = new Program();
-            Console.WriteLine($"Maximum number is {program.findmaxnumber(569, 999, 478)}");
+            Console.WriteLine($"Maximum number is {program.findmaxnumber(569, 478, 999)}");
         }
         public int findmaxnumber(int num1, int num2, int num3)
         {
