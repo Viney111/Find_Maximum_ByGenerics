@@ -10,9 +10,9 @@ namespace FindMaximumByGenerics
         static void Main(string[] args)
         {
             Program program = new Program();
-            Console.WriteLine($"Maximum number is {program.findmaxnumber(569, 478, 999)}");
+            Console.WriteLine($"Maximum float is {program.findMaxFloat(5.8F ,8.5F,5.6F)}");
         }
-        public int findmaxnumber(int num1, int num2, int num3)
+        public float findMaxFloat(float num1, float num2, float num3)
         {
             if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
             {
