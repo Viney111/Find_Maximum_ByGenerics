@@ -10,21 +10,21 @@ namespace FindMaximumByGenerics
         static void Main(string[] args)
         {
             Program program = new Program();
-            Console.WriteLine($"Maximum float is {program.findMaxFloat(5.8F ,8.5F,5.6F)}");
+            Console.WriteLine($"Maximum String is {program.findMaxString("A","P","B")}");
         }
-        public float findMaxFloat(float num1, float num2, float num3)
+        public string findMaxString(string str1, string str2, string str3)
         {
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
+            if (str1.CompareTo(str2) > 0 && str1.CompareTo(str3) > 0)
             {
-                return num1;
+                return str1;
             }
-            else if (num2.CompareTo(num3) > 0 && num2.CompareTo(num1) > 0)
+            else if (str2.CompareTo(str3) > 0 && str2.CompareTo(str1) > 0)
             {
-                return num2;
+                return str2;
             }
             else
             {
-                return num3;  
+                return str3;  
             }
         }
     }
