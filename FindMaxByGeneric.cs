@@ -8,20 +8,26 @@ namespace Find_Maximum_ByGenerics
 {
     public class FindMaxByGeneric <T>
     {
-        public T testMax(T element1, T element2, T element3)
+        public T[] arrayofElement;
+
+        public FindMaxByGeneric(T[] arrayofElement)
         {
-            if (Comparer<T>.Default.Compare(element1, element2) > 0 && Comparer<T>.Default.Compare(element1, element3) > 0)
-            {
-                return element1;
-            }
-            else if (Comparer<T>.Default.Compare(element2, element1) > 0 && Comparer<T>.Default.Compare(element2, element3) > 0)
-            {
-                return element2;
-            }
-            else
-            {
-                return element3;
-            }
+            this.arrayofElement = arrayofElement;
+        }
+        public T[] Sorting(T[] arrayofElements)
+        {
+            Array.Sort(arrayofElements);
+            return arrayofElements ;
+        }
+        public T MaxarrayofElement( T[] arrayofElements)
+        {
+            var sorted_arrayofElements = Sorting(arrayofElements);
+            return sorted_arrayofElements[^1];
+        }
+        public T MaxMethod()
+        {
+            var max = MaxarrayofElement(arrayofElement);
+            return max;
         }
     }
 }
